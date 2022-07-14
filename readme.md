@@ -4,7 +4,7 @@
 
 L'opération Kernel 3.0 est le CTF organisé par le **COS** (Commandement des Opérations Spéciales), pour ses 30 ans.
 
-Il sagit d'un CTF Geopardy accompagné d'un Escape Game virtuel qui c'est déroulé du 27 juin au 14 juillet 2022.
+Il sagit d'un CTF Geopardy accompagné d'un Escape Game virtuel créé par [succubus interactive](https://www.succubus.fr) qui s'est déroulé du 27 juin au 14 juillet 2022.
 
 ## À propos de moi
 
