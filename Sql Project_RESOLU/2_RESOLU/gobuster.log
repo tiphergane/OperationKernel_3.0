@@ -1,18 +1,0 @@
-===============================================================
-Gobuster v3.1.0
-by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
-===============================================================
-[+] Url:                     https://secureblog.challenge.operation-kernel.fr/v2/
-[+] Method:                  GET
-[+] Threads:                 10
-[+] Delay:                   500ms
-[+] Wordlist:                /opt/SecLists/Discovery/Web-Content/directory-list-1.0.txt
-[+] Negative Status codes:   404
-[+] User Agent:              gobuster/3.1.0
-[+] Extensions:              php
-[+] Timeout:                 10s
-===============================================================
-2022/06/30 19:54:16 Starting gobuster in directory enumeration mode
-===============================================================
-/index.php            (Status: 200) [Size: 6142]
-/login.php            (Status: 200) [Size: 5107]
