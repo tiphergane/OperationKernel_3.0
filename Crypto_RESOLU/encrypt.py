@@ -41,8 +41,7 @@ class Encryptor(object):
         while len(plaintext)%16:
             plaintext += b'\0'
 
-        #ctr = random.getrandbits(128)
-        ctr = 0x74639d71570d80f5170620fbdd72bcd9
+        ctr = random.getrandbits(128)
 
         encrypted = ctr.to_bytes(16, 'big')
         for i in range(0, len(plaintext), 16):
