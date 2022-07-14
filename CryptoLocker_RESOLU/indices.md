@@ -1,0 +1,6 @@
+dXNlcj1ib3QmcGFzc3dvcmQ9VzBya18xbl9QUjBHUnM1
+user=bot&password=W0rk_1n_PR0GRs5
+aHR0cHM6Ly9jY29mZmVlLmNoYWxsZW5nZS5vcGVyYXRpb24ta2VybmVsLmZyL2My
+https://ccoffee.challenge.operation-kernel.fr/c2
+ZW5jcnlwdC5weQ==
+encrypt.py
